@@ -1,9 +1,8 @@
-const express = require("express"); //importa o mÃ³dulo express neste arquivo
-const app = express(); //iniciando o express
+const express = require("express");
+const app = express();
 
 //criando a rota inicial
 app.get("/", function (req, res) {
-  // res.send envia uma resposta HTML direta para o navegador
   res.send(`
     <html>
       <body style="font-family: Arial, sans-serif;">
@@ -32,10 +31,8 @@ app.get("/lutadores", function (req, res) {
 
 //rota com parametro opcional
 app.get("/evento/:edicao?", function (req, res) {
-  // req.params acessa os dados que o cliente digitou na URL
   const edicao = req.params.edicao;
 
-  // Se o usuário digitou uma edição na URL (ex: /evento/12)
   if (edicao) {
     res.send(`
       <html>
@@ -46,7 +43,6 @@ app.get("/evento/:edicao?", function (req, res) {
       </html>
     `);
   } else {
-    // Se o usuário acessou apenas /evento
     res.send(`
       <html>
         <body style="font-family: Arial, sans-serif;">
