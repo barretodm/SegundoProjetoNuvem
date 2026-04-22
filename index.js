@@ -20,7 +20,7 @@ app.get("/lutadores", function (req, res) {
       <body style="font-family: Arial, sans-serif;">
         <h1>Lista de Lutadores Confirmados</h1>
         <ul>
-          <li>Ricardo Capoeira</li>
+          <li>Alex Poatan</li>
           <li>Yuri Anselmo</li>
           <li>Emily Nauru</li>
         </ul>
