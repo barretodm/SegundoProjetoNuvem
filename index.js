@@ -30,7 +30,7 @@ app.get("/lutadores", function (req, res) {
 });
 
 //rota com parametro opcional
-app.get("/evento/:edicao?", function (req, res) {
+app.get("/evento/{:edicao}", function (req, res) {
   const edicao = req.params.edicao;
 
   if (edicao) {
